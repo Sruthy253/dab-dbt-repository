@@ -1,7 +1,6 @@
 SELECT
   ### Key ###
   CONCAT(model,"_",color,"_",IFNULL(size,"no-size")) AS product_id 
-  ###########
   ,model
   ,color
   ,size
@@ -30,4 +29,4 @@ SELECT
 	,IF(stock<0,NULL,ROUND(stock*price,2)) AS stock_value
 FROM `my-first-project-393103.raw_data_circle. raw_cc_stock` t
 WHERE TRUE
-ORDER BY product_id;
+ORDER BY product_id
